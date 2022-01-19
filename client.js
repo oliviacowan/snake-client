@@ -7,7 +7,12 @@ const connect = function () {
     host,
     port
   });
-
+  conn.on('connect', () => {
+    console.log('Connection established');
+  });
+  conn.on('connect', () => {
+    conn.write("Name: OC");
+  });
   conn.on('data', (data) => {
     console.log(`server says: ${data}`);
   });

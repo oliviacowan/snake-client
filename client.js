@@ -12,22 +12,9 @@ const connect = function () {
   });
   conn.on('connect', () => {
     conn.write("Name: OC");
-    // setInterval(() => {
-    //   conn.write("Move: up");
-
-    // }, 50);
-    let moves = ["Move: up", "Move: left", "Move: down", "Move: down", "Move: right"];
-    let delay = 1000;
-    for (const move of moves) {
-    setTimeout(() => {
-      conn.write(move);
-    }, delay) 
-    delay += 50;
-  }
-    // conn.write("Move: up");
-    // conn.write("Move: down");
-    // conn.write("Move: left");
-    // conn.write("Move: right");
+      setInterval(() => {
+      conn.write('Move: up');
+    }, 1000) 
   });
 
 

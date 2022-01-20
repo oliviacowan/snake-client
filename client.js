@@ -10,9 +10,9 @@ const connect = function () {
   });
   conn.on('connect', () => {
     conn.write("Name: OC");
-      setInterval(() => {
-      conn.write('Move: up');
-    }, 1000) 
+    //   setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 1000) 
   });
   
   conn.on('data', (data) => {
